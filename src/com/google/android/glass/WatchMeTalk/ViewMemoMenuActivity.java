@@ -35,7 +35,7 @@ public class ViewMemoMenuActivity extends Activity
     @Override
     protected void onCreate(Bundle savedInstanceState) 
     {
-        super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState); 
     }
 
     @Override
