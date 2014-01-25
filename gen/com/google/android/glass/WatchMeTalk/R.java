@@ -25,12 +25,19 @@ public final class R {
     }
     public static final class id {
         public static final int action_settings=0x7f080000;
+		public static int no_memos_text_view;
+		public static int memo_list_text_view;
+		public static int close;
+		public static int view_memo_scroll;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
+		public static int card_layout;
     }
     public static final class menu {
         public static final int main=0x7f070000;
+		public static int main_menu;
+		public static int main_menu_no_memo;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;

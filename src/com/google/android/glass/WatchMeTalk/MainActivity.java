@@ -5,7 +5,6 @@ import java.util.ArrayList;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.view.Menu;
 import android.content.Intent;
 import android.speech.RecognizerIntent;
 
@@ -37,21 +36,15 @@ public class MainActivity extends Activity {
 			//Get results of speech to text
 			memoResult = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS).get(0);
 			//get list of memos saved in shared prefs
-			if (Utils.checkForObjectInSharedPrefs(this,getString(R.string.shared_memo_key)))
-			{
-				memoList = new ArrayList<String>(Utils.getStringArrayPref(this, getString(R.string.shared_memo_key)));
-			}
-			else{
-				memoList = new ArrayList<String>();
-			}
+			
 			//add the new memo to the list
 			memoList.add(memoResult);
 			//Save the new list
 			ArrayList<String> memoArrayList = new ArrayList<String>(memoList);
 			
 			//update the list in the live card
-			stopService(new Intent(this, ViewMemoService.class));
-			Intent serviceIntent = new Intent(this, ViewMemoService.class);
+			stopService(new Intent(this, DisplayService.class));
+			Intent serviceIntent = new Intent(this, DisplayService.class);
 			serviceIntent.putExtra("update", true);
 			startService(serviceIntent);
 		}

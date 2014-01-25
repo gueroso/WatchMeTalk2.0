@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <string name="app_name">Watch Me Talk</string>
+    <string name="start_record">Record</string>
+    <string name="shared_memo_key">Shared Memo Key</string>
+    <string name="placeholder">Hello Glass!</string>
+    <string name="start_app">voice example</string>
+    <string name="close">Close</string>
+    <string name="image_description">Image</string>
+    <string name= "promt_text">set text</string>
+
+</resources>
+
+

@@ -21,7 +21,7 @@ public class DisplayService extends Service {
 	
 	
 	
-	ArrayList<String> list = Util.ArrayList;
+	ArrayList<String> list = Util.arrayList;
 	
 	
 	
@@ -52,7 +52,7 @@ public class DisplayService extends Service {
 			mLiveCard.setViews(remoteViews);
 			Intent menu;
 			if (list.size() == 0){
-				menu = new Intent(this, ViewMemoMenuActivityNoMemo.class);
+				menu = new Intent(this, ViewMemoMenuActivityNoMemos.class);
 			}
 			else{
 				menu = new Intent(this, ViewMemoMenuActivity.class);

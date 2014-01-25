@@ -19,7 +19,7 @@
  */
 
 
-package com.openquartz.glassmemo;
+package com.google.android.glass.WatchMeTalk;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -33,7 +33,10 @@ import android.view.MenuItem;
 public class ViewMemoMenuActivityNoMemos extends Activity 
 {
 
-    @Override
+    private int id;
+
+
+	@Override
     protected void onCreate(Bundle savedInstanceState) 
     {
         super.onCreate(savedInstanceState);
@@ -57,16 +60,16 @@ public class ViewMemoMenuActivityNoMemos extends Activity
     @Override
     public boolean onOptionsItemSelected(MenuItem item) 
     {
-        switch (item.getItemId()) 
+        if(this.id == R.id.close)
         {
-            case R.id.close:
+            
             //close card
-                stopService(new Intent(this, ViewMemoService.class));
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+                stopService(new Intent(this, DisplayService.class));
+                return true;}
+         else{  
+                return super.onOptionsItemSelected(item);}
         }
-    }
+    
 
     @Override
     public void onOptionsMenuClosed(Menu menu) 

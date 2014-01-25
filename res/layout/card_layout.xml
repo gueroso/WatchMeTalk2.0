@@ -1,0 +1,26 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000" >
+
+    <!--
+         <ListView
+        android:id="@+id/ListView01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@null"
+        android:scrollbars="none"
+        android:listSelector="@android:color/transparent"
+        android:drawSelectorOnTop="false"
+        android:entries="@array/string_array_name" />
+    -->
+
+    <TextView
+        android:id="@+id/memo_list_text_view"
+        style="@styleTextMemoListStyle" />
+
+    <TextView
+        android:id="@+id/no_memos_text_view"
+        style="@style/TextStyle" />
+
+</FrameLayout>

@@ -18,7 +18,7 @@
  * limitations under the License.
  */
 
-package com.openquartz.glassmemo;
+package com.google.android.glass.WatchMeTalk;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -56,19 +56,18 @@ public class ViewMemoMenuActivity extends Activity
     @Override
     public boolean onOptionsItemSelected(MenuItem item) 
     {
-        switch (item.getItemId()) 
-        {
-            case R.id.close:
-            //close the card 
-                stopService(new Intent(this, ViewMemoService.class));
-                return true;
-            case R.id.view_memo_scroll:
-            //open the card scroll activity
+        int itemId = item.getItemId();
+		if (itemId == R.id.close) {
+			//close the card 
+			stopService(new Intent(this, DisplayService.class));
+			return true;
+		} else if (itemId == R.id.view_memo_scroll) {
+			//open the card scroll activity
             startActivity(new Intent(this, MemoScrollActivity.class));
-            return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
+			return true;
+		} else {
+			return super.onOptionsItemSelected(item);
+		}
     }
 
     @Override
