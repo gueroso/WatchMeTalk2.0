@@ -17,10 +17,10 @@
 
     <TextView
         android:id="@+id/memo_list_text_view"
-        style="@styleTextMemoListStyle" />
+        android:style="@style/TextMemoListStyle" />
 
     <TextView
         android:id="@+id/no_memos_text_view"
-        style="@style/TextStyle" />
+        android:style="@style/TextStyle" />
 
 </FrameLayout>
